@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <title>TrafalgarPlaza</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+   </head>
+   <body>
+      <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="topnav">
+         <a href="/homepage">Home</a>
+         <a href="team">Team</a>
+         <a href="/admin">Activity Log</a>
+         <div class="topnav-right">
+            <div class="dropdown">
+               <button class="dropbtn">Account
+               <i class="fa fa-caret-down"></i>
+               </button>
+               <div class="dropdown-content">
+                  <a href="/logout">Logout</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class = "dashboard">
+         <h1>Activity Log</h1>
+         <form>
+            <table class = "data">
+               <tr id = "tableColor">
+                  <td>Time in</td>
+                  <td>Date</td>
+                  <td>Allowed</td>
+               </tr>
+               <tr>
+                  <td>10:03am</td>
+                  <td>October 27, 2021</td>
+                  <td id = "colorAllow">Success</td>
+               </tr>
+               <tr>
+                  <td>12:01am</td>
+                  <td>December 25, 2021</td>
+                  <td id = "colorAllow">Success</td>
+               </tr>
+            </table>
+         </form>
+         <a href = "/"><input class = "submit" type = "Submit" class = "btn btn-dark" value = "Scan"></a>
+      </div>
+   </body>
+</html>

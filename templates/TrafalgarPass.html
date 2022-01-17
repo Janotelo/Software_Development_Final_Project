@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <title>TrafalgarPlaza</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/visitorbase.css') }}">
+   </head>
+   <body>
+      <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="topnav">
+         <div class="topnav-right">
+            <a class ="active" href="/">TP Pass</a>
+         </div>
+      </div>
+      <form method = "POST">
+         </br></br></br>
+         <img id = "imgSize" src = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+         </br>
+         <div class = "login">
+            <h1>Trafalgar Pass</h1>
+            <label>Email</label>
+            <input type = "text" placeholder="Enter Email" name = "email" required>
+            <label>Password</label>
+            </br>
+            <input type = "password" placeholder="Enter Password" name = "password" required>
+            </br></br>
+            <a><input class = "submit" type = "Submit" class = "btn btn-dark" value = "Go"></a>
+            </br>
+         </div>
+      </form>
+   </body>

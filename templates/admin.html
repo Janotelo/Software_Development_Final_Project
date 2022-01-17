@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>TrafalgarPlaza</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+   </head>
+   <body>
+      <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="topnav">
+        <a href="/homepage">About</a>
+        <a href="/team">Team</a>
+        <a class="active" href="/admin">Visitor Logs</a>
+        <div class="topnav-right">
+           <div class="dropdown">
+              <button class="dropbtn">Account
+              <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                 <a href="/logout">Logout</a>
+              </div>
+           </div>
+        </div>
+     </div>
+      <div class = "dashboard">
+         <h1>Dashboard</h1>
+         <form method = "GET">
+         <a><input class = "refresh" type = "submit" class = "btn btn-dark" value = "Refresh"></a>
+            <table class = "data">
+               <tr id = "tableColor">
+                  {% for header in headings %}
+                  <th>{{ header }}</th>
+                  {% endfor %}
+               </tr>
+               {% for row in data %}
+               <tr>
+                  {% for cell in row %}
+                  <td>{{ cell }}</td>
+                  {% endfor %}
+               </tr>
+               {% endfor %}
+            </table>
+         </form>
+      </div>
+   </body>
+   </html>
