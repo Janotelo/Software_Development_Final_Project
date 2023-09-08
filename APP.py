@@ -5,7 +5,7 @@ from json import loads as deserialize
 
 app = Flask(__name__, static_url_path='')
 app.secret_key = "thisisasecretkey"
-url = "http://192.168.1.26:5001"
+url = "http://192.168.1.25:5001"
 
 headings = ("ID", "First_Name", "Last_Name", "Time_In", "Date_In")
 @app.route("/")

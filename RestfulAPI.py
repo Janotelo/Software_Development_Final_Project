@@ -242,5 +242,5 @@ def delete_user(current_user, public_id):
     return jsonify({'message' : 'The user has been deleted!'})
 
 if __name__ == '__main__':
-    db.create_all()
+    ##db.create_all()
     app.run(host="0.0.0.0", port=5001, debug=True)
